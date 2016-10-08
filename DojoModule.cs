@@ -37,6 +37,7 @@ namespace dojo1
             {
                 @ViewBag.quotes = "";
                 List<Dictionary<string, object>> myresults = DbConnector.ExecuteQuery("SELECT * FROM users");
+                myresults.Reverse();
                 foreach (Dictionary<string, object> item in myresults)
                 {
                     @ViewBag.quotes += "<p>" + item["Quote"] + " " + "<br>" + "-" + item["NAME"] + " " + item["created_at"] + "</p>" + "<hr>";
