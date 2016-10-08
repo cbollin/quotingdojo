@@ -17,10 +17,7 @@
                     <input id="addquoteButton" type="submit" value="Add my Quote"/>
                 </form>
             
-            <form action="/allquotes" method="post">
-                <input id="allQuotes" type="submit" value="Play Again"/>
-            </form>
-         
+            <p><a href="/quotes"><button>See All Quotes!</button></a><p>
         </center>
     </body>
 </html>

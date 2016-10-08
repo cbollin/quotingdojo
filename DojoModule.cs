@@ -35,16 +35,11 @@ namespace dojo1
 
             Get("/quotes", args =>
             {
-                ViewBag.NAME = "";
-                ViewBag.Quote = "";
-                ViewBag.created_at = "";
-                ViewBag.MyMessageToUsers = "Hello from me.";
-
+                @ViewBag.quotes = "";
                 List<Dictionary<string, object>> myresults = DbConnector.ExecuteQuery("SELECT * FROM users");
                 foreach (Dictionary<string, object> item in myresults)
                 {
-                    Console.WriteLine(item["id"] + " " + item["NAME"] + " " + item["Quote"] +  " " + item["created_at"]);
-                    @ViewBag.NAME += item["NAME"];
+                    @ViewBag.quotes += "<p>" + item["Quote"] + " " + "<br>" + "-" + item["NAME"] + " " + item["created_at"] + "</p>" + "<hr>";
                 }
 
                 return View["quotes.sshtml", myresults];

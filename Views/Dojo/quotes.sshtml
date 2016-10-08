@@ -10,12 +10,10 @@
     <body>
         <center>
             <h1>Welcome to Quoting Dojo</h1>
+            <p><a href="/"><button>Add a Quote</button></a></p>
 
-         <p>@ViewBag.MyMessageToUsers</p>
-        @Each
-        @Current
-        @EndEach
-//not currently working
+         <p>@ViewBag.quotes</p>
+
         </center>
     </body>
 </html>

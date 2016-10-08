@@ -10,49 +10,10 @@
     <body>
         <center>
             <h1>Welcome to Quoting Dojo</h1>
+            <p><a href="/"><button>Add a Quote</button></a></p>
 
-         <p>@ViewBag.MyMessageToUsers</p>
-        @Each
-        @Current
-        @EndEach
+         <p>@ViewBag.quotes</p>
 
-        @Model.NAME
-        @Model.myresults
-        @Model.users.myresults
-        @Model.users.NAME
-
-        @Each.item
-        @Current.item
-        @EndEach
-        @Each.item
-        Hello @Current.TKey
-        @EndEach
-        @Each.myresults.NAME.VALUE
-        Hello @Current.NAME!
-        @EndEach
-        @myresults.NAME
-        @Each.item["id"]
-        @Current.NAME!
-        @EndEach
-        @Each.myresults.item["NAME"]
-        @Current.NAME!
-        @EndEach
-        @If.myresults
-        Users found!
-        @EndIf
-  @foreach (var item in Model) {
-    <tr>
-          <td>
-            @Html.DisplayFor(modelItem => item.NAME)
-        </td>
-:
-:
-  <td>
-            @(((Dictionary<long, String>)ViewBag.myresults)[item.NAME])
-  </td>
-:
-:
-</tr>
         </center>
     </body>
 </html>
