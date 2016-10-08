@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+         <link rel="stylesheet" href="Content/style.css"/>
+         <title>GNG</title>
+    </head>
+    <body>
+        <center>
+            <h1>Welcome to Quoting Dojo</h1>
+
+         <p>@ViewBag.MyMessageToUsers</p>
+        @Each
+        @Current
+        @EndEach
+
+        @Model.NAME
+        @Model.myresults
+        @Model.users.myresults
+        @Model.users.NAME
+
+        @Each.item
+        @Current.item
+        @EndEach
+        @Each.item
+        Hello @Current.TKey
+        @EndEach
+        @Each.myresults.NAME.VALUE
+        Hello @Current.NAME!
+        @EndEach
+        @myresults.NAME
+        @Each.item["id"]
+        @Current.NAME!
+        @EndEach
+        @Each.myresults.item["NAME"]
+        @Current.NAME!
+        @EndEach
+        @If.myresults
+        Users found!
+        @EndIf
+  @foreach (var item in Model) {
+    <tr>
+          <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+:
+:
+  <td>
+            @(((Dictionary<long, String>)ViewBag.myresults)[item.NAME])
+  </td>
+:
+:
+</tr>
+        </center>
+    </body>
+</html>

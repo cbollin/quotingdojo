@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+         <link rel="stylesheet" href="Content/style.css"/>
+         <title>GNG</title>
+    </head>
+    <body>
+        <center>
+            <h1>Welcome to Quoting Dojo</h1>
+
+         <p>@ViewBag.MyMessageToUsers</p>
+        @Each
+        @Current
+        @EndEach
+//not currently working
+        </center>
+    </body>
+</html>

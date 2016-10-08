@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+         <link rel="stylesheet" href="Content/style.css"/>
+         <title>GNG</title>
+    </head>
+    <body>
+        <center>
+            <h1>Welcome to Quoting Dojo</h1>
+
+                <form action="/quotes" method="post">
+                    <p>Your Name: <input type="text" name="NAME" /> </p>
+                    <p>Your Quote: <input type="text" name="Quote"  /> </p>
+                    <input id="addquoteButton" type="submit" value="Add my Quote"/>
+                </form>
+            
+            <form action="/allquotes" method="post">
+                <input id="allQuotes" type="submit" value="Play Again"/>
+            </form>
+         
+        </center>
+    </body>
+</html>
